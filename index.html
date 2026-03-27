@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conferencia</title>
+    <meta
+      name="description"
+      content="Micrositio estatico para presentar una conferencia con texto, PDF, audio y video."
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Inicio</a>
+        <nav class="top-nav" aria-label="Navegacion principal">
+          <a href="conferencia.html">Leer conferencia</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Conferencia en linea</p>
+            <h1 id="site-title">Titulo de la conferencia</h1>
+            <p id="site-subtitle" class="subtitle">
+              Subtitulo pendiente de edicion
+            </p>
+            <p id="hero-author" class="hero-author">J. Miguel Barranco</p>
+            <p class="intro">
+              Este micrositio propone una entrada sobria y clara a la
+              conferencia: una portada para ubicar al lector, un acceso directo
+              al texto completo y una base ordenada para reunir la memoria en
+              PDF, el audio y el video sin cambiar la estructura del proyecto.
+            </p>
+
+            <!-- Este bloque da prioridad visual a la lectura web y deja
+                 los materiales complementarios en una segunda linea. -->
+            <div class="cta-panel">
+              <a class="button button-primary button-featured" href="conferencia.html"
+                >Leer la conferencia completa</a
+              >
+              <p class="cta-note">
+                Version de lectura larga con indice interno, ritmo editorial y
+                estructura lista para pegar el texto definitivo.
+              </p>
+
+              <div class="button-row resource-actions">
+                <a
+                  id="pdf-link"
+                  class="button button-secondary"
+                  href="assets/pdf/memoria-conferencia.pdf"
+                  download
+                  >Descargar PDF</a
+                >
+                <a
+                  id="audio-link"
+                  class="button button-secondary"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Descargar audio</a
+                >
+                <a
+                  id="video-link"
+                  class="button button-secondary"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Descargar video</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <figure class="hero-media media-frame">
+            <!-- Si la imagen todavia no existe o esta vacia, el sitio muestra este bloque de apoyo. -->
+            <img
+              src="./assets/img/portada.png"
+              alt="Portada de la conferencia Cuando el cuerpo pierde voz, el ser se fragmenta"
+              decoding="async"
+              onerror="this.style.display='none'; this.parentElement.classList.add('is-empty');"
+            />
+            <div class="media-placeholder">
+              <span>Portada</span>
+              <p>Reemplaza `./assets/img/portada.png` por tu imagen final.</p>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="summary">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Ejes centrales</p>
+            <h2>Un recorrido en tres movimientos</h2>
+            <p class="section-intro">
+              La conferencia se organiza como un desplazamiento reflexivo: parte
+              de un diagnostico sobre la perdida de presencia, examina la
+              experiencia de la dispersion contemporanea y culmina en una
+              propuesta de reunion interior, palabra compartida y responsabilidad
+              comun.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="info-card">
+              <figure class="card-media media-frame">
+                <img
+                  src="./assets/img/acto1.png"
+                  alt="Imagen de apoyo para el primer movimiento de la conferencia: la desconexion"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <p class="card-kicker">Primer movimiento</p>
+              <h3>Desconexion</h3>
+              <p class="card-lead">
+                El punto de partida observa como se debilitan la escucha, la
+                atencion y el tiempo compartido.
+              </p>
+              <p>
+                No se trata solo de distancia entre personas, sino de una forma
+                mas honda de desvinculacion: la dificultad para habitar una
+                conversacion, una pausa o una presencia real.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <figure class="card-media media-frame">
+                <img
+                  src="./assets/img/acto2.png"
+                  alt="Imagen de apoyo para el segundo movimiento de la conferencia: la fragmentacion"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <p class="card-kicker">Segundo movimiento</p>
+              <h3>Fragmentacion</h3>
+              <p class="card-lead">
+                El desarrollo central muestra como la vida dispersa rompe la
+                continuidad de la experiencia.
+              </p>
+              <p>
+                La conferencia examina la acumulacion de mensajes, tareas y
+                estimulos que multiplican la presencia superficial, pero vuelven
+                fragil el sentido de orientacion y comunidad.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <figure class="card-media media-frame">
+                <img
+                  src="./assets/img/acto3.png"
+                  alt="Imagen de apoyo para el tercer movimiento de la conferencia: la integracion"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <p class="card-kicker">Tercer movimiento</p>
+              <h3>Integracion</h3>
+              <p class="card-lead">
+                El cierre propone una salida afirmativa: recomponer memoria,
+                lenguaje y experiencia comun.
+              </p>
+              <p>
+                Integrar significa volver a reunir lo que se disperso y abrir un
+                espacio mas respirable para la lectura, la atencion y la vida en
+                comun.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p id="footer-title">Conferencia</p>
+        <p id="footer-author">J. Miguel Barranco</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/site-data.js"></script>
+    <script>
+      // Este bloque toma los datos centrales del archivo site-data.js
+      // para no tener que cambiar enlaces o titulos en varios lugares.
+      document.getElementById("site-title").textContent = siteData.siteTitle;
+      document.getElementById("site-subtitle").textContent =
+        siteData.siteSubtitle;
+      document.getElementById("hero-author").textContent =
+        "Por " + siteData.authorName;
+      document.getElementById("footer-title").textContent = siteData.siteTitle;
+      document.getElementById("footer-author").textContent =
+        "Por " + siteData.authorName;
+      document.getElementById("pdf-link").href = siteData.pdfUrl;
+      document.getElementById("audio-link").href = siteData.driveAudioUrl;
+      document.getElementById("video-link").href = siteData.driveVideoUrl;
+      document.title = siteData.siteTitle;
+    </script>
+  </body>
+</html>

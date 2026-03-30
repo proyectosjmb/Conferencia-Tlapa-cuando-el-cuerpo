@@ -16,6 +16,8 @@
         <a class="brand" href="index.html">Inicio</a>
         <nav class="top-nav" aria-label="Navegacion principal">
           <a href="conferencia.html">Leer conferencia</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#comentarios">Comentarios</a>
         </nav>
       </div>
     </header>
@@ -175,6 +177,144 @@
           </div>
         </div>
       </section>
+
+      <section id="contacto" class="contact-section">
+        <div class="container">
+          <div class="section-heading section-heading-narrow">
+            <p class="eyebrow">Información de contacto</p>
+            <h2>Contacto</h2>
+            <p class="section-intro">
+              Si deseas escribir directamente al conferencista o seguir de cerca
+              este trabajo, aquí encuentras los medios principales de contacto
+              y referencia.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-copy">
+              <p class="contact-kicker">Contacto directo</p>
+              <h3 id="contact-name">J. Miguel Barranco</h3>
+              <p class="contact-description">
+                Un espacio claro para mantener la comunicación en torno a la
+                conferencia, resolver dudas prácticas y compartir información de
+                seguimiento.
+              </p>
+
+              <div class="button-row contact-actions">
+                <a
+                  id="contact-email-link"
+                  class="button button-secondary button-contact"
+                  href="mailto:barrancomiguel@yahoo.com.mx"
+                  >Escribir por correo</a
+                >
+                <a
+                  id="contact-whatsapp-link"
+                  class="button button-primary button-contact"
+                  href="https://wa.me/522223243257"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Enviar mensaje por WhatsApp</a
+                >
+                <a
+                  id="contact-facebook-link"
+                  class="button button-secondary button-contact"
+                  href="https://www.facebook.com/RespiracionConsciente"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver fanpage en Facebook</a
+                >
+              </div>
+            </div>
+
+            <dl class="contact-details" aria-label="Datos de contacto">
+              <div class="contact-detail">
+                <dt>Correo</dt>
+                <dd>
+                  <a
+                    id="contact-email-text"
+                    class="inline-link"
+                    href="mailto:barrancomiguel@yahoo.com.mx"
+                    >barrancomiguel@yahoo.com.mx</a
+                  >
+                </dd>
+              </div>
+              <div class="contact-detail">
+                <dt>WhatsApp</dt>
+                <dd>
+                  <span id="contact-whatsapp-display">222 324 3257</span>
+                  <span class="contact-note">Disponible únicamente por WhatsApp.</span>
+                </dd>
+              </div>
+              <div class="contact-detail">
+                <dt>Ubicación</dt>
+                <dd id="contact-location">Puebla, Puebla</dd>
+              </div>
+              <div class="contact-detail">
+                <dt>Facebook</dt>
+                <dd>
+                  <a
+                    id="contact-facebook-text"
+                    class="inline-link"
+                    href="https://www.facebook.com/RespiracionConsciente"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Respiracion Consciente</a
+                  >
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section id="comentarios" class="feedback-section">
+        <div class="container">
+          <div class="section-heading section-heading-narrow">
+            <p class="eyebrow">Participación</p>
+            <h2>Preguntas y comentarios</h2>
+            <p class="section-intro">
+              Comparte tus dudas, comentarios o impresiones sobre la
+              conferencia mediante el formulario en línea o, si lo prefieres,
+              ábrelo en una pestaña aparte.
+            </p>
+          </div>
+
+          <div class="feedback-card">
+            <div
+              id="feedback-placeholder"
+              class="feedback-placeholder"
+              role="status"
+              aria-live="polite"
+            >
+              <p class="feedback-placeholder-title">Próximamente</p>
+              <p>
+                Próximamente estará disponible un formulario para enviar
+                preguntas y comentarios.
+              </p>
+            </div>
+
+            <div id="feedback-embed-shell" class="feedback-embed-shell" hidden>
+              <iframe
+                id="feedback-embed"
+                class="feedback-embed"
+                title="Formulario de preguntas y comentarios"
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <p id="feedback-link-wrap" class="feedback-link-wrap" hidden>
+              <a
+                id="feedback-link"
+                class="button button-primary button-contact"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Abrir formulario</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -199,6 +339,55 @@
       document.getElementById("pdf-link").href = siteData.pdfUrl;
       document.getElementById("audio-link").href = siteData.driveAudioUrl;
       document.getElementById("video-link").href = siteData.driveVideoUrl;
+      document.getElementById("contact-name").textContent = siteData.contactName;
+
+      const contactEmailMailto = "mailto:" + siteData.contactEmail;
+      const contactEmailLink = document.getElementById("contact-email-link");
+      const contactEmailText = document.getElementById("contact-email-text");
+      contactEmailLink.href = contactEmailMailto;
+      contactEmailText.href = contactEmailMailto;
+      contactEmailText.textContent = siteData.contactEmail;
+
+      document.getElementById("contact-whatsapp-link").href =
+        siteData.contactWhatsappUrl;
+      document.getElementById("contact-whatsapp-display").textContent =
+        siteData.contactWhatsappDisplay;
+      document.getElementById("contact-location").textContent =
+        siteData.contactLocation;
+
+      const contactFacebookLink = document.getElementById(
+        "contact-facebook-link"
+      );
+      const contactFacebookText = document.getElementById(
+        "contact-facebook-text"
+      );
+      contactFacebookLink.href = siteData.contactFacebook;
+      contactFacebookText.href = siteData.contactFacebook;
+
+      const feedbackPlaceholder = document.getElementById("feedback-placeholder");
+      const feedbackEmbedShell = document.getElementById("feedback-embed-shell");
+      const feedbackEmbed = document.getElementById("feedback-embed");
+      const feedbackLinkWrap = document.getElementById("feedback-link-wrap");
+      const feedbackLink = document.getElementById("feedback-link");
+      const feedbackEmbedUrl = siteData.feedbackFormEmbedUrl.trim();
+      const feedbackFormUrl = siteData.feedbackFormUrl.trim();
+      const hasFeedbackEmbed = feedbackEmbedUrl !== "";
+      const hasFeedbackLink = feedbackFormUrl !== "";
+
+      if (hasFeedbackEmbed) {
+        feedbackEmbed.src = feedbackEmbedUrl;
+        feedbackEmbedShell.hidden = false;
+      }
+
+      if (hasFeedbackLink) {
+        feedbackLink.href = feedbackFormUrl;
+        feedbackLinkWrap.hidden = false;
+      }
+
+      if (hasFeedbackEmbed || hasFeedbackLink) {
+        feedbackPlaceholder.hidden = true;
+      }
+
       document.title = siteData.siteTitle;
     </script>
   </body>

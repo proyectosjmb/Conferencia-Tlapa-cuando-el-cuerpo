@@ -7,6 +7,16 @@ const siteData = {
   siteTitle: "Cuando el cuerpo pierde voz, el ser se fragmenta",
   siteSubtitle: "Una mirada integradora del ser humano",
   authorName: "J. Miguel Barranco",
+  contactName: "J. Miguel Barranco",
+  contactEmail: "barrancomiguel@yahoo.com.mx",
+  contactWhatsappDisplay: "222 324 3257",
+  contactWhatsappUrl: "https://wa.me/522223243257",
+  contactLocation: "Puebla, Puebla",
+  contactFacebook: "https://www.facebook.com/RespiracionConsciente",
+  feedbackFormUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSd5uC-DQyBZAMhcgoIRP3mpSurJUkO6iMFv7XVNf86XenCVOQ/viewform?usp=dialog",
+  feedbackFormEmbedUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSd5uC-DQyBZAMhcgoIRP3mpSurJUkO6iMFv7XVNf86XenCVOQ/viewform?embedded=true",
 
   // Reemplaza estos dos enlaces por los tuyos cuando tengas los archivos en Google Drive.
   // Estan escritos como ejemplos realistas para identificar facilmente que debes cambiar.
